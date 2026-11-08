@@ -1,21 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 -64 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100">
+  <!-- Cruz patada templaria, tinta plana con borde irregular como un sello estampado -->
   <defs>
-    <linearGradient id="plata" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f1ece6"/><stop offset=".5" stop-color="#8f8780"/><stop offset="1" stop-color="#d9d3cc"/>
-    </linearGradient>
-    <linearGradient id="sangre" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e3242b"/><stop offset="1" stop-color="#7d0a10"/>
-    </linearGradient>
-    <polygon id="brazo" points="-58,0 -47,-8 -43,-4.5 43,-4.5 47,-8 58,0 47,8 43,4.5 -43,4.5 -47,8"/>
+    <filter id="sello" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
   </defs>
-  <circle r="40" fill="#141012" stroke="url(#plata)" stroke-width="7"/>
-  <circle r="33" fill="none" stroke="#5a5250" stroke-width="1.5"/>
-  <g stroke="#b3121b" stroke-width="3" stroke-linecap="round">
-    <line x1="-26" y1="-26" x2="26" y2="26"/><line x1="26" y1="-26" x2="-26" y2="26"/>
-  </g>
-  <g fill="url(#sangre)" stroke="url(#plata)" stroke-width="2.2" stroke-linejoin="round">
-    <use href="#brazo"/><use href="#brazo" transform="rotate(90)"/>
-  </g>
-  <circle r="6" fill="#141012" stroke="url(#plata)" stroke-width="2"/>
-  <circle r="2.4" fill="#e3242b"/>
+  <path filter="url(#sello)" fill="#a3121a" stroke="#e6dccd" stroke-width="2.4" stroke-linejoin="round"
+    d="M-5.5,-5.5 C-6.5,-22 -11,-36 -21,-46 C-8,-42.5 8,-42.5 21,-46 C11,-36 6.5,-22 5.5,-5.5
+       C22,-6.5 36,-11 46,-21 C42.5,-8 42.5,8 46,21 C36,11 22,6.5 5.5,5.5
+       C6.5,22 11,36 21,46 C8,42.5 -8,42.5 -21,46 C-11,36 -6.5,22 -5.5,5.5
+       C-22,6.5 -36,11 -46,21 C-42.5,8 -42.5,-8 -46,-21 C-36,-11 -22,-6.5 -5.5,-5.5 Z"/>
 </svg>
