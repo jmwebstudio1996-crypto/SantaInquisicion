@@ -73,13 +73,13 @@ a { color: inherit; }
 .portada__contenido { position: relative; z-index: 6; padding: 110px var(--gutter) 90px; width: 100%; max-width: 900px; }
 .portada__emblema { margin: 0 auto 14px; width: clamp(110px, 18vw, 168px); height: auto; filter: drop-shadow(0 0 24px rgba(227,36,43,.55)); animation: emblema 1.6s cubic-bezier(.2,.7,.2,1) both, latido 4s 1.6s ease-in-out infinite; }
 .portada__titulo {
-  margin: 0; font: 400 clamp(2.2rem, 12vw, 7.5rem)/1.05 var(--gotica);
+  margin: 0; font: 400 clamp(1.6rem, calc(10vw - 4px), 5.5rem)/1.05 var(--gotica);
   background: linear-gradient(180deg, #fff 0%, var(--plata) 45%, #8f8780 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 4px 0 rgba(0,0,0,.6)) drop-shadow(0 0 30px rgba(179,18,27,.45));
   animation: forja 1.4s .5s cubic-bezier(.2,.7,.2,1) both;
 }
-.lema { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 0; margin: 18px 0 0; font: 400 clamp(1.25rem, 3vw, 1.8rem) var(--display); color: var(--plata); }
+.lema { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 6px 0; margin: 18px 0 0; font: 400 clamp(1.25rem, 3vw, 1.8rem) var(--display); color: var(--plata); }
 .lema span + span::before { content: "✠"; color: var(--sangre-viva); margin: 0 .9em; letter-spacing: 0; }
 .portada .lema { animation: aparecer 1s 1.3s both; }
 .portada__sub { margin: 22px auto 0; max-width: 34em; color: var(--plata-tenue); animation: aparecer 1s 1.6s both; }
