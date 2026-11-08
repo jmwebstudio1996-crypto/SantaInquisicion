@@ -6,6 +6,7 @@
   --brasa: #ff6a2b;
   --plata: #d9d3cc;
   --plata-tenue: #a39b94;
+  --gotica: "UnifrakturMaguntia", "Old English Text MT", serif;
   --display: "Cinzel", "Trajan Pro", Georgia, serif;
   --texto: "Alegreya Sans", system-ui, sans-serif;
   --ancho: 1180px;
@@ -38,7 +39,7 @@ a { color: inherit; }
   transition: background .3s;
 }
 .cabecera.is-solida { background: rgba(20,16,18,.94); box-shadow: 0 1px 0 rgba(179,18,27,.35); }
-.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 700 1.05rem var(--display); letter-spacing: .04em; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 400 1.4rem var(--gotica); }
 .cabecera nav { display: flex; gap: 22px; margin-left: auto; }
 .cabecera nav a { text-decoration: none; font: 500 .95rem var(--display); color: var(--plata-tenue); padding: 6px 0; position: relative; }
 .cabecera nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--sangre); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
@@ -72,7 +73,7 @@ a { color: inherit; }
 .portada__contenido { position: relative; z-index: 6; padding: 110px var(--gutter) 90px; width: 100%; max-width: 900px; }
 .portada__emblema { margin: 0 auto 14px; width: clamp(110px, 18vw, 168px); height: auto; filter: drop-shadow(0 0 24px rgba(227,36,43,.55)); animation: emblema 1.6s cubic-bezier(.2,.7,.2,1) both, latido 4s 1.6s ease-in-out infinite; }
 .portada__titulo {
-  margin: 0; font: 900 clamp(1.7rem, 10vw, 6.5rem)/1 var(--display); letter-spacing: .03em;
+  margin: 0; font: 400 clamp(2.2rem, 12vw, 7.5rem)/1.05 var(--gotica);
   background: linear-gradient(180deg, #fff 0%, var(--plata) 45%, #8f8780 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 4px 0 rgba(0,0,0,.6)) drop-shadow(0 0 30px rgba(179,18,27,.45));
@@ -88,7 +89,7 @@ a { color: inherit; }
 
 /* Secciones comunes */
 main > section:not(.portada) { position: relative; z-index: 6; padding: clamp(80px, 12vw, 140px) var(--gutter); }
-.titulo-sangre { position: relative; display: inline-block; margin: 0 0 28px; padding-bottom: 14px; font: 700 clamp(2rem, 5vw, 3.4rem)/1.1 var(--display); color: var(--plata); }
+.titulo-sangre { position: relative; display: inline-block; margin: 0 0 28px; padding-bottom: 14px; font: 400 clamp(2.4rem, 6vw, 4rem)/1.1 var(--gotica); color: var(--plata); }
 /* Trazo de sangre que se pinta bajo el título al entrar en pantalla */
 .titulo-sangre::after {
   content: ""; position: absolute; left: -4px; right: -12px; bottom: 0; height: 10px;
@@ -120,7 +121,7 @@ p { max-width: 62ch; }
 .votos__intro, .cronicas__intro { color: var(--plata-tenue); margin-top: -8px; }
 .votos__lista { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 36px); margin-top: 40px; }
 .cuadro--alto { aspect-ratio: 3 / 4; }
-.voto h3 { margin: 26px 0 8px; font: 700 1.7rem var(--display); color: var(--sangre-viva); }
+.voto h3 { margin: 26px 0 8px; font: 400 2.2rem var(--gotica); color: var(--sangre-viva); }
 .voto p { margin: 0; color: var(--plata-tenue); }
 
 /* Crónicas: tira horizontal */
