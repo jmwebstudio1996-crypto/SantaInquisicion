@@ -198,9 +198,25 @@ p { max-width: 62ch; }
   .norma { padding: 26px 0 26px 62px; }
   .norma::before { left: 0; top: 24px; width: 42px; height: 42px; }
 }
+/* Botón de menú (solo en pantallas estrechas) */
+.menu-boton { display: none; }
 @media (max-width: 1080px) {
-  .cabecera nav { display: none; }
-  .cabecera .boton--pequeno { margin-left: auto; }
+  .menu-boton {
+    display: inline-grid; place-items: center; width: 44px; height: 44px; margin-left: auto;
+    background: none; border: 1px solid var(--plata-tenue); border-radius: 2px; color: var(--plata); cursor: pointer;
+  }
+  .menu-boton span { width: 20px; height: 2px; background: currentColor; box-shadow: 0 -6px currentColor, 0 6px currentColor; transition: transform .2s, box-shadow .2s; }
+  .is-abierta .menu-boton span { transform: rotate(45deg); box-shadow: 0 0 currentColor, 0 0 currentColor; }
+  .is-abierta .menu-boton span::after { content: ""; display: block; width: 20px; height: 2px; background: currentColor; transform: rotate(-90deg); }
+  .cabecera.is-abierta { background: rgba(20,16,18,.97); }
+  .cabecera nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; margin: 0;
+    padding: 4px var(--gutter) 16px; background: rgba(20,16,18,.97); border-bottom: 1px solid rgba(179,18,27,.45);
+  }
+  .cabecera.is-abierta nav { display: flex; }
+  .cabecera nav a { padding: 12px 0; font-size: 1.5rem; border-bottom: 1px solid var(--hierro); }
+  .cabecera nav a:last-child { border-bottom: 0; }
+  .cabecera nav a::after { display: none; }
 }
 @media (max-width: 860px) {
   .orden { grid-template-columns: 1fr; }

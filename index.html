@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <canvas id="brasas" aria-hidden="true"></canvas>
@@ -23,7 +23,7 @@
       <img src="assets/emblema.svg" alt="" width="36" height="36">
       <span>Santa Inquisición</span>
     </a>
-    <nav aria-label="Principal">
+    <nav id="menu" aria-label="Principal">
       <a href="#orden">La orden</a>
       <a href="#votos">Votos</a>
       <a href="#normas">Normas</a>
@@ -31,6 +31,7 @@
       <a href="#cinematica">Cinemática</a>
       <a href="#reclutamiento">Reclutamiento</a>
     </nav>
+    <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
     <a class="boton boton--pequeno js-discord" href="#">Discord</a>
   </header>
 
@@ -194,6 +195,6 @@
     <p class="pie__legal">Santa Inquisición es una hermandad de jugadores de WoW Forever. Sin afiliación con Blizzard Entertainment.</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>

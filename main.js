@@ -10,6 +10,17 @@ const reducido = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Cabecera sólida al bajar
 const cabecera = document.querySelector('.cabecera');
+
+// Menú desplegable en pantallas estrechas
+const menuBoton = document.querySelector('.menu-boton');
+const abrirMenu = (abrir) => {
+  cabecera.classList.toggle('is-abierta', abrir);
+  menuBoton.setAttribute('aria-expanded', abrir);
+  menuBoton.setAttribute('aria-label', abrir ? 'Cerrar menú' : 'Abrir menú');
+};
+menuBoton.addEventListener('click', () => abrirMenu(!cabecera.classList.contains('is-abierta')));
+document.querySelectorAll('#menu a').forEach((a) => a.addEventListener('click', () => abrirMenu(false)));
+addEventListener('keydown', (e) => { if (e.key === 'Escape') abrirMenu(false); });
 addEventListener('scroll', () => cabecera.classList.toggle('is-solida', scrollY > 40), { passive: true });
 
 // Revelado al entrar en pantalla
