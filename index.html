@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santa Inquisición · Hermandad de WoW Forever</title>
+  <meta name="description" content="Santa Inquisición, hermandad de WoW Forever. Honor, disciplina y victoria. Únete a la orden.">
+  <meta property="og:title" content="Santa Inquisición">
+  <meta property="og:description" content="Hermandad de WoW Forever. Honor, disciplina y victoria.">
+  <meta property="og:image" content="assets/frames/castillo.jpg">
+  <meta name="theme-color" content="#141012">
+  <link rel="icon" href="assets/emblema.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="brasas" aria-hidden="true"></canvas>
+
+  <header class="cabecera">
+    <a class="marca" href="#inicio" aria-label="Santa Inquisición, inicio">
+      <img src="assets/emblema.svg" alt="" width="36" height="36">
+      <span>Santa Inquisición</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#orden">La orden</a>
+      <a href="#votos">Votos</a>
+      <a href="#cronicas">Crónicas</a>
+      <a href="#cinematica">Cinemática</a>
+      <a href="#reclutamiento">Reclutamiento</a>
+    </nav>
+    <a class="boton boton--pequeno js-discord" href="#">Discord</a>
+  </header>
+
+  <main>
+    <section class="portada" id="inicio">
+      <video class="portada__video" autoplay muted loop playsinline preload="metadata" poster="assets/frames/castillo.jpg" aria-hidden="true">
+        <source src="assets/santa-inquisicion.mp4" type="video/mp4">
+      </video>
+      <div class="portada__velo"></div>
+      <div class="portada__contenido">
+        <img class="portada__emblema" src="assets/emblema.svg" alt="Emblema de la Santa Inquisición" width="168" height="168">
+        <h1 class="portada__titulo">Santa Inquisición</h1>
+        <p class="lema"><span>Honor</span><span>Disciplina</span><span>Victoria</span></p>
+        <p class="portada__sub">Hermandad de WoW Forever. Marchamos juntos, caemos juntos, volvemos más fuertes.</p>
+        <div class="portada__acciones">
+          <a class="boton js-discord" href="#">Únete en Discord</a>
+          <button class="boton boton--fantasma" type="button" data-play-cinematica>Ver la cinemática</button>
+        </div>
+      </div>
+      <a class="portada__bajar" href="#orden" aria-label="Bajar a La orden"></a>
+    </section>
+
+    <section class="orden" id="orden">
+      <div class="orden__texto">
+        <h2 class="titulo-sangre" data-revelar>La orden</h2>
+        <p class="entrada">No somos una hermandad cualquiera. Somos una orden: con jerarquía, con palabra y con un estandarte que se defiende.</p>
+        <p>La Santa Inquisición nace en WoW Forever para jugadores que quieren algo más que un tag sobre la cabeza. Raids organizadas, mazmorras en grupo, PvP cuando toca y una comunidad que se conoce por su nombre.</p>
+        <p>Aquí el que entra se compromete. A cambio, nunca vuelve a hacer una mazmorra solo.</p>
+      </div>
+      <figure class="cuadro" data-revelar>
+        <img src="assets/frames/juramento.jpg" alt="Inquisidor encapuchado jurando ante una mesa iluminada por velas" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="votos" id="votos">
+      <h2 class="titulo-sangre" data-revelar>Los tres votos</h2>
+      <p class="votos__intro">Todo miembro los pronuncia al entrar. Todo oficial responde por ellos.</p>
+      <div class="votos__lista">
+        <article class="voto" data-revelar>
+          <figure class="cuadro cuadro--alto"><img src="assets/frames/estandarte.jpg" alt="" loading="lazy"></figure>
+          <h3>Honor</h3>
+          <p>Se respeta al compañero, al rival y al botín. Nada de ninjas, nada de dramas: la palabra dada se cumple.</p>
+        </article>
+        <article class="voto" data-revelar>
+          <figure class="cuadro cuadro--alto"><img src="assets/frames/caballero.jpg" alt="" loading="lazy"></figure>
+          <h3>Disciplina</h3>
+          <p>Puntualidad en la raid, consumibles preparados y tácticas leídas. El grupo avanza al ritmo del que más se esfuerza.</p>
+        </article>
+        <article class="voto" data-revelar>
+          <figure class="cuadro cuadro--alto"><img src="assets/frames/carga.jpg" alt="" loading="lazy"></figure>
+          <h3>Victoria</h3>
+          <p>Jugamos para ganar: jefes caídos, campos de batalla tomados y progreso que se nota semana tras semana.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cronicas" id="cronicas">
+      <h2 class="titulo-sangre" data-revelar>Crónicas</h2>
+      <p class="cronicas__intro">Estampas de la orden en marcha. Desliza para recorrerlas.</p>
+      <ul class="tira" tabindex="0" aria-label="Galería de imágenes de la orden">
+        <li><img src="assets/frames/castillo.jpg" alt="Fortaleza de la orden ardiendo bajo una tormenta" loading="lazy"></li>
+        <li><img src="assets/frames/puerta.jpg" alt="Inquisidor ante una puerta en llamas" loading="lazy"></li>
+        <li><img src="assets/frames/asedio.jpg" alt="Asedio a una ciudad amurallada" loading="lazy"></li>
+        <li><img src="assets/frames/ejercito.jpg" alt="El ejército de la orden formado con sus estandartes" loading="lazy"></li>
+        <li><img src="assets/frames/invocacion.jpg" alt="Líder alzando los brazos ante la tropa" loading="lazy"></li>
+        <li><img src="assets/frames/campo.jpg" alt="Campo de batalla tras la victoria" loading="lazy"></li>
+        <li><img src="assets/frames/vigia.jpg" alt="Caballero vigilando las murallas" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <section class="cinematica" id="cinematica">
+      <h2 class="titulo-sangre" data-revelar>Cinemática</h2>
+      <div class="cinematica__marco" data-revelar>
+        <video id="video-cinematica" controls playsinline preload="none" poster="assets/frames/titulo.jpg">
+          <source src="assets/santa-inquisicion.mp4" type="video/mp4">
+          Tu navegador no puede reproducir este vídeo.
+        </video>
+      </div>
+    </section>
+
+    <section class="reclutamiento" id="reclutamiento">
+      <div class="reclutamiento__fondo" aria-hidden="true"><img src="assets/frames/campo.jpg" alt="" loading="lazy"></div>
+      <div class="reclutamiento__contenido">
+        <h2 class="titulo-sangre" data-revelar>Reclutamiento abierto</h2>
+        <p class="entrada">Buscamos espadas, escudos y sanadores que quieran formar parte de algo con nombre propio.</p>
+        <ul class="requisitos">
+          <li>Ganas de jugar en grupo y de aprender las tácticas.</li>
+          <li>Discord con micrófono para las raids.</li>
+          <li>Respeto por los tres votos dentro y fuera de la hermandad.</li>
+          <li>Cualquier clase y nivel: a los nuevos los subimos nosotros.</li>
+        </ul>
+        <a class="boton js-discord" href="#">Únete en Discord</a>
+        <p class="nota">Escribe en el canal de reclutamiento y un oficial te atenderá.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/emblema.svg" alt="" width="48" height="48">
+    <p class="lema lema--pie"><span>Honor</span><span>Disciplina</span><span>Victoria</span></p>
+    <p class="pie__legal">Santa Inquisición es una hermandad de jugadores de WoW Forever. Sin afiliación con Blizzard Entertainment.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
