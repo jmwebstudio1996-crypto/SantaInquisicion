@@ -69,10 +69,10 @@ a { color: inherit; }
     radial-gradient(ellipse at center, rgba(20,16,18,.35) 0%, rgba(20,16,18,.8) 70%, var(--ceniza) 100%),
     linear-gradient(to bottom, transparent 60%, var(--ceniza));
 }
-.portada__contenido { position: relative; z-index: 6; padding: 110px var(--gutter) 90px; max-width: 900px; }
+.portada__contenido { position: relative; z-index: 6; padding: 110px var(--gutter) 90px; width: 100%; max-width: 900px; }
 .portada__emblema { margin: 0 auto 14px; width: clamp(110px, 18vw, 168px); height: auto; filter: drop-shadow(0 0 24px rgba(227,36,43,.55)); animation: emblema 1.6s cubic-bezier(.2,.7,.2,1) both, latido 4s 1.6s ease-in-out infinite; }
 .portada__titulo {
-  margin: 0; font: 900 clamp(2.6rem, 9vw, 6.5rem)/1 var(--display); letter-spacing: .03em;
+  margin: 0; font: 900 clamp(1.7rem, 10vw, 6.5rem)/1 var(--display); letter-spacing: .03em;
   background: linear-gradient(180deg, #fff 0%, var(--plata) 45%, #8f8780 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 4px 0 rgba(0,0,0,.6)) drop-shadow(0 0 30px rgba(179,18,27,.45));
