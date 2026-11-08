@@ -1,5 +1,5 @@
 // ⚔ Pon aquí la invitación de Discord de la hermandad (p. ej. https://discord.gg/xxxx)
-const DISCORD_URL = '#';
+const DISCORD_URL = 'https://discord.gg/k7qS5BpNjv';
 
 document.querySelectorAll('.js-discord').forEach((a) => {
   a.href = DISCORD_URL;
